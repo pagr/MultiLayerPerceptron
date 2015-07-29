@@ -28,12 +28,321 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cyclesNumeric = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.hiddenNumeric = new System.Windows.Forms.NumericUpDown();
+            this.runButton = new System.Windows.Forms.Button();
+            this.parametersLabel = new System.Windows.Forms.Label();
+            this.etaLabel = new System.Windows.Forms.Label();
+            this.alphaLabel = new System.Windows.Forms.Label();
+            this.etaNumeric = new System.Windows.Forms.NumericUpDown();
+            this.alphaNumeric = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cyclesNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hiddenNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.etaNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alphaNumeric)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Name = "chart1";
+            this.chart1.Size = new System.Drawing.Size(1059, 381);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.chart1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.chart2);
+            this.splitContainer1.Size = new System.Drawing.Size(1059, 541);
+            this.splitContainer1.SplitterDistance = 381;
+            this.splitContainer1.SplitterWidth = 8;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // chart2
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(0, 0);
+            this.chart2.Name = "chart2";
+            this.chart2.Size = new System.Drawing.Size(1059, 152);
+            this.chart2.TabIndex = 1;
+            this.chart2.Text = "chart2";
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.label2);
+            this.splitContainer2.Panel1.Controls.Add(this.cyclesNumeric);
+            this.splitContainer2.Panel1.Controls.Add(this.button1);
+            this.splitContainer2.Panel1.Controls.Add(this.label1);
+            this.splitContainer2.Panel1.Controls.Add(this.hiddenNumeric);
+            this.splitContainer2.Panel1.Controls.Add(this.runButton);
+            this.splitContainer2.Panel1.Controls.Add(this.parametersLabel);
+            this.splitContainer2.Panel1.Controls.Add(this.etaLabel);
+            this.splitContainer2.Panel1.Controls.Add(this.alphaLabel);
+            this.splitContainer2.Panel1.Controls.Add(this.etaNumeric);
+            this.splitContainer2.Panel1.Controls.Add(this.alphaNumeric);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.splitContainer1);
+            this.splitContainer2.Size = new System.Drawing.Size(1249, 541);
+            this.splitContainer2.SplitterDistance = 186;
+            this.splitContainer2.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 179);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Cycles";
+            // 
+            // cyclesNumeric
+            // 
+            this.cyclesNumeric.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.cyclesNumeric.Location = new System.Drawing.Point(59, 177);
+            this.cyclesNumeric.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.cyclesNumeric.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.cyclesNumeric.Name = "cyclesNumeric";
+            this.cyclesNumeric.Size = new System.Drawing.Size(113, 20);
+            this.cyclesNumeric.TabIndex = 9;
+            this.cyclesNumeric.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Location = new System.Drawing.Point(13, 506);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 141);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Hidden";
+            // 
+            // hiddenNumeric
+            // 
+            this.hiddenNumeric.Location = new System.Drawing.Point(59, 139);
+            this.hiddenNumeric.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.hiddenNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.hiddenNumeric.Name = "hiddenNumeric";
+            this.hiddenNumeric.Size = new System.Drawing.Size(113, 20);
+            this.hiddenNumeric.TabIndex = 6;
+            this.hiddenNumeric.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // runButton
+            // 
+            this.runButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.runButton.Location = new System.Drawing.Point(96, 506);
+            this.runButton.Name = "runButton";
+            this.runButton.Size = new System.Drawing.Size(75, 23);
+            this.runButton.TabIndex = 5;
+            this.runButton.Text = "Run";
+            this.runButton.UseVisualStyleBackColor = true;
+            this.runButton.Click += new System.EventHandler(this.runButton_Click);
+            // 
+            // parametersLabel
+            // 
+            this.parametersLabel.AutoSize = true;
+            this.parametersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parametersLabel.Location = new System.Drawing.Point(12, 24);
+            this.parametersLabel.Name = "parametersLabel";
+            this.parametersLabel.Size = new System.Drawing.Size(122, 25);
+            this.parametersLabel.TabIndex = 4;
+            this.parametersLabel.Text = "Parameters";
+            // 
+            // etaLabel
+            // 
+            this.etaLabel.AutoSize = true;
+            this.etaLabel.Location = new System.Drawing.Point(12, 103);
+            this.etaLabel.Name = "etaLabel";
+            this.etaLabel.Size = new System.Drawing.Size(23, 13);
+            this.etaLabel.TabIndex = 3;
+            this.etaLabel.Text = "Eta";
+            // 
+            // alphaLabel
+            // 
+            this.alphaLabel.AutoSize = true;
+            this.alphaLabel.Location = new System.Drawing.Point(12, 67);
+            this.alphaLabel.Name = "alphaLabel";
+            this.alphaLabel.Size = new System.Drawing.Size(34, 13);
+            this.alphaLabel.TabIndex = 2;
+            this.alphaLabel.Text = "Alpha";
+            // 
+            // etaNumeric
+            // 
+            this.etaNumeric.DecimalPlaces = 2;
+            this.etaNumeric.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.etaNumeric.Location = new System.Drawing.Point(59, 101);
+            this.etaNumeric.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.etaNumeric.Name = "etaNumeric";
+            this.etaNumeric.Size = new System.Drawing.Size(113, 20);
+            this.etaNumeric.TabIndex = 1;
+            this.etaNumeric.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            // 
+            // alphaNumeric
+            // 
+            this.alphaNumeric.DecimalPlaces = 2;
+            this.alphaNumeric.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.alphaNumeric.Location = new System.Drawing.Point(59, 65);
+            this.alphaNumeric.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.alphaNumeric.Name = "alphaNumeric";
+            this.alphaNumeric.Size = new System.Drawing.Size(113, 20);
+            this.alphaNumeric.TabIndex = 0;
+            this.alphaNumeric.Value = new decimal(new int[] {
+            9,
+            0,
+            0,
+            65536});
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1249, 541);
+            this.Controls.Add(this.splitContainer2);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cyclesNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hiddenNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.etaNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alphaNumeric)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Label parametersLabel;
+        private System.Windows.Forms.Label etaLabel;
+        private System.Windows.Forms.Label alphaLabel;
+        private System.Windows.Forms.NumericUpDown etaNumeric;
+        private System.Windows.Forms.NumericUpDown alphaNumeric;
+        private System.Windows.Forms.Button runButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown hiddenNumeric;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown cyclesNumeric;
     }
 }
 
