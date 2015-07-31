@@ -1,6 +1,6 @@
-﻿namespace NeuralNetwork
+﻿namespace Compression
 {
-    partial class Form1
+    partial class XOR
     {
         /// <summary>
         /// Required designer variable.

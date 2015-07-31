@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6406C21D-F727-485D-8E66-54857D16F00D}</ProjectGuid>
+    <ProjectGuid>{D155D748-7658-44C9-BD65-78E38ACF162E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NeuralNetwork</RootNamespace>
-    <AssemblyName>NeuralNetwork</AssemblyName>
+    <RootNamespace>Compression</RootNamespace>
+    <AssemblyName>Compression</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -51,16 +51,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Compression.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Compression.Designer.cs">
+      <DependentUpon>Compression.cs</DependentUpon>
+    </Compile>
+    <Compile Include="picker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="picker.Designer.cs">
+      <DependentUpon>picker.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Separation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Separation.Designer.cs">
+      <DependentUpon>Separation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XOR.Designer.cs">
+      <DependentUpon>XOR.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Compression.resx">
+      <DependentUpon>Compression.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="picker.resx">
+      <DependentUpon>picker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,6 +92,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Separation.resx">
+      <DependentUpon>Separation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XOR.resx">
+      <DependentUpon>XOR.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,6 +111,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MPL\MultiLayerPerceptron.csproj">
+      <Project>{95678ddc-baeb-4135-8cbb-d567c38c36f7}</Project>
+      <Name>MultiLayerPerceptron</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

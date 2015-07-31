@@ -16,7 +16,7 @@ namespace Compression
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new XOR());
+            Application.Run(new picker());
         }
     }
 }
