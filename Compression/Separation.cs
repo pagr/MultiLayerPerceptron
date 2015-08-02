@@ -39,6 +39,8 @@ namespace Compression
                 patterns[1, i] = patternsTmp[i][1];
                 targets[0, i] = targetsTmp[i];
             }
+            var tmp = new { Cool = "", Stuff = "" };
+            
             nn = new MLP.MLP(Matrix<Double>.Build.DenseOfArray(patterns), Matrix<Double>.Build.DenseOfArray(targets), (int)hiddenNumeric.Value, (double)alphaNumeric.Value, (double)etaNumeric.Value);
 
             for (int cycle = 0; cycle < (int)cyclesNumeric.Value; cycle++)

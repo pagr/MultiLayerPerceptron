@@ -32,9 +32,15 @@ namespace MLP
         }
         public MLP(Matrix<Double> patterns, Matrix<Double> targets, int hidden)
         {
-            w1 = Matrix<Double>.Build.Random(hidden, patterns.RowCount + 1);
-            w2 = Matrix<Double>.Build.Random(targets.RowCount, w1.RowCount + 1);
+            //w1 = Matrix<Double>.Build.Random(hidden, patterns.RowCount + 1);
+            //w2 = Matrix<Double>.Build.Random(targets.RowCount, w1.RowCount + 1);
+            w1 = Matrix<Double>.Build.DenseIdentity(hidden, patterns.RowCount + 1);
+            w2 = Matrix<Double>.Build.DenseIdentity(targets.RowCount, w1.RowCount + 1);
 
+            w1[0, 0] = 1;
+            w1[0, 1] = 1;
+            w2[0, 0] = 1;
+            w2[0, 1] = 1;
             dw1 = w1 * 0;
             dw2 = w2 * 0;
             this.patterns = patterns;
@@ -49,8 +55,8 @@ namespace MLP
             var oIn = w2 * hOut;
             var oOut = phi(oIn);
 
-            var deltaO = (oOut - targets).PointwiseMultiply((1 + oOut).PointwiseMultiply(1 - oOut)) * 0.5;
-            var deltah = (w2.Transpose() * deltaO).PointwiseMultiply((1 + hOut).PointwiseMultiply(1 - hOut)) * 0.5;
+            var deltaO = (oOut - targets).PointwiseMultiply((1 + oOut).PointwiseMultiply(1 - oOut))*0.5 ;
+            var deltah = (w2.Transpose() * deltaO).PointwiseMultiply((1 + hOut).PointwiseMultiply(1 - hOut))*0.5;
 
             deltah = Matrix<double>.Build.DenseOfRows(deltah.ToRowArrays().Reverse().Skip(1).Reverse());//drop last row(bias)
 
@@ -77,7 +83,9 @@ namespace MLP
             var patternsWithBias = Matrix<double>.Build.Dense(inMatrix.RowCount + 1, inMatrix.ColumnCount);
             for (int r = 0; r < inMatrix.RowCount; r++)
                 patternsWithBias.SetRow(r, inMatrix.Row(r));
-            patternsWithBias.Row(patternsWithBias.RowCount - 1).SetValues(Enumerable.Repeat(1.0, patternsWithBias.ColumnCount).ToArray());
+            //patternsWithBias.Row(patternsWithBias.RowCount - 1).SetValues(Enumerable.Repeat(1.0, patternsWithBias.ColumnCount).ToArray());
+            for (int i = 0; i < patternsWithBias.ColumnCount; i++)
+                patternsWithBias[patternsWithBias.RowCount - 1, i] = 1.0;
             return patternsWithBias;
         }
 
@@ -87,9 +95,9 @@ namespace MLP
             for (int r = 0; r < hin.RowCount; r++)
                 for (int c = 0; c < hin.ColumnCount; c++)
                 {
-                    phi[r, c] = 2 / (1 + Math.Exp(-hin[r, c])) - 1;//SpecialFunctions.Logistic(hin[r, c]);
+                    phi[r, c] =  1/(1 + Math.Exp(-hin[r, c])) ;//SpecialFunctions.Logistic(hin[r, c]);
                 }
-            return phi ;
+            return phi *2-1;
         }
 
     }
